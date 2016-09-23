@@ -21,7 +21,7 @@
 	url = https://github.com/hynek/vim-python-pep8-indent.git
 [submodule ".vim/bundle/vim-wakatime"]
 	path = .vim/bundle/vim-wakatime
-	url = git://github.com/wakatime/vim-wakatime.git
+	url = https://github.com/wakatime/vim-wakatime.git
 [submodule ".oh-my-zsh"]
 	path = .oh-my-zsh
-	url = git://github.com/ei-grad/oh-my-zsh.git
+	url = https://github.com/ei-grad/oh-my-zsh.git
