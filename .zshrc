@@ -1,11 +1,12 @@
-export ZSH=$HOME/.oh-my-zsh
+ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="ei-grad"
 DISABLE_AUTO_UPDATE="true"
 DISABLE_CORRECTION="true"
 
-plugins=(git virtualenvwrapper virtualenv pyutils)
-
+export PATH=$PATH:$HOME/.local/bin
 export WORKON_HOME=$HOME/.virtualenvs
+
+plugins=(git virtualenvwrapper virtualenv pyutils)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -40,7 +41,6 @@ alias stop='sudo systemctl stop'
 alias restart='sudo systemctl restart'
 
 export LANG=ru_RU.UTF-8
-export PATH=$PATH:$HOME/.local/bin
 export GOPATH=$HOME/.local
 export LESS=-FRKX
 export EDITOR=/usr/bin/vim
