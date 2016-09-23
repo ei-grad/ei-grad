@@ -1,0 +1,27 @@
+[submodule ".vim/ansible-vim"]
+	path = .vim/ansible-vim
+	url = https://github.com/pearofducks/ansible-vim
+[submodule ".vim/bundle/ansible-vim"]
+	path = .vim/bundle/ansible-vim
+	url = https://github.com/pearofducks/ansible-vim
+[submodule ".vim/bundle/editorconfig-vim"]
+	path = .vim/bundle/editorconfig-vim
+	url = https://github.com/editorconfig/editorconfig-vim.git
+[submodule ".vim/bundle/kotlin-vim"]
+	path = .vim/bundle/kotlin-vim
+	url = https://github.com/udalov/kotlin-vim
+[submodule ".vim/bundle/python-syntax"]
+	path = .vim/bundle/python-syntax
+	url = https://github.com/hdima/python-syntax.git
+[submodule ".vim/bundle/vim-jade"]
+	path = .vim/bundle/vim-jade
+	url = https://github.com/digitaltoad/vim-jade.git
+[submodule ".vim/bundle/vim-python-pep8-indent"]
+	path = .vim/bundle/vim-python-pep8-indent
+	url = https://github.com/hynek/vim-python-pep8-indent.git
+[submodule ".vim/bundle/vim-wakatime"]
+	path = .vim/bundle/vim-wakatime
+	url = git://github.com/wakatime/vim-wakatime.git
+[submodule ".oh-my-zsh"]
+	path = .oh-my-zsh
+	url = git://github.com/ei-grad/oh-my-zsh.git
