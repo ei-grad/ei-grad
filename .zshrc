@@ -46,5 +46,6 @@ export LESS=-FRKX
 export EDITOR=/usr/bin/vim
 export WINEARCH=win32
 export WINEPREFIX=$HOME/.wine
+export GOPATH=$HOME/go
 
 setopt nonomatch
