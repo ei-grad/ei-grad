@@ -1,6 +1,6 @@
 [user]
-	name = Andrew Grigorev
-	email = andrew@ei-grad.ru
+    name = Andrew Grigorev
+    email = andrew@ei-grad.ru
 [alias]
     st = status
     ci = commit
@@ -23,6 +23,7 @@
 #[svn]
 #    authorsfile = /home/ei-grad/users.txt
 [push]
-	default = simple
+    default = simple
 [core]
-	excludesfile = /home/ei-grad/.global_gitignore
+    excludesfile = /home/ei-grad/.global_gitignore
+    quotePath = false
