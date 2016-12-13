@@ -3,7 +3,7 @@ ZSH_THEME="ei-grad"
 DISABLE_AUTO_UPDATE="true"
 DISABLE_CORRECTION="true"
 
-export PATH=$PATH:$HOME/.local/bin:$HOME/go/bin
+export PATH=$HOME/.local/bin:$HOME/go/bin:$PATH
 export WORKON_HOME=$HOME/.virtualenvs
 
 plugins=(git virtualenvwrapper virtualenv pyutils)
