@@ -15,7 +15,7 @@ setxkbmap us,ru ,winkeys grp:caps_toggle,grp_led:scroll,compose:ralt
 xset b off
 xset +fp /usr/share/fonts/local/
 feh --bg-fill ~/arch_linux-wallpaper-1920x1080.jpg
-redshift -l 55.565654:37.340223 -t 5800:4800 &
+redshift -l 55.565654:37.340223 -t 5200:4200 &
 pcmanfm -d &
 xcompmgr &
 
