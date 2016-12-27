@@ -39,6 +39,7 @@ bindkey '^I' expand-or-complete
 alias start='sudo systemctl start'
 alias stop='sudo systemctl stop'
 alias restart='sudo systemctl restart'
+alias curltime="curl -s -w 'HTTP/%{http_version} %{http_code} \"%{content_type}\" dns=%{time_namelookup} tcp=%{time_connect} ssl=%{time_appconnect} total=%{time_total} size=%{size_download}\n' -o /dev/null"
 
 export LANG=ru_RU.UTF-8
 export GOPATH=$HOME/.local
