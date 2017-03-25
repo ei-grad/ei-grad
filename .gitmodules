@@ -31,3 +31,6 @@
 [submodule ".vim/bundle/vim-go"]
 	path = .vim/bundle/vim-go
 	url = https://github.com/fatih/vim-go.git
+[submodule ".vim/bundle/pony-vim-syntax"]
+	path = .vim/bundle/pony-vim-syntax
+	url = https://github.com/dleonard0/pony-vim-syntax.git
