@@ -34,3 +34,6 @@
 [submodule ".vim/bundle/pony-vim-syntax"]
 	path = .vim/bundle/pony-vim-syntax
 	url = https://github.com/dleonard0/pony-vim-syntax.git
+[submodule ".vim/bundle/pony-currycomb.vim"]
+	path = .vim/bundle/pony-currycomb.vim
+	url = https://github.com/killerswan/pony-currycomb.vim.git
