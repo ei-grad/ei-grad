@@ -4,6 +4,7 @@ set rulerformat=%30(L=%l\ c=%c\ b=%v\ B=%o%)
 syntax enable
 filetype plugin indent on
 execute pathogen#infect()
+set bg=dark
 
 let g:syntastic_python_flake8_args = '--max-line-length=120'
 let g:syntastic_c_include_dirs = ['/usr/include/python2.7']
