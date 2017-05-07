@@ -11,13 +11,14 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
   unset f
 fi
 
-setxkbmap us,ru ,winkeys grp:caps_toggle,grp_led:scroll,compose:ralt
+xcompmgr &
+#setxkbmap us,ru ,winkeys grp:caps_toggle,grp_led:scroll,compose:ralt
 xset b off
 xset +fp /usr/share/fonts/local/
+#xwinwrap -b -fs -sp -fs -nf -ov -- /usr/lib/xscreensaver/glmatrix -root -window-id WID &
 feh --bg-fill ~/arch_linux-wallpaper-1920x1080.jpg
-redshift -l 55.565654:37.340223 -t 5200:4200 &
+redshift -l 55.565654:37.340223 -t 5200:3200 &
 pcmanfm -d &
-xcompmgr &
 
 eval $(ssh-agent)
 ssh-add
