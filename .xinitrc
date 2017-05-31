@@ -18,6 +18,7 @@ xset +fp /usr/share/fonts/local/
 #xwinwrap -b -fs -sp -fs -nf -ov -- /usr/lib/xscreensaver/glmatrix -root -window-id WID &
 feh --bg-fill ~/arch_linux-wallpaper-1920x1080.jpg
 redshift -l 55.565654:37.340223 -t 5200:3200 &
+nm-applet &
 pcmanfm -d &
 
 eval $(ssh-agent)
