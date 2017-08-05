@@ -37,3 +37,6 @@
 [submodule ".vim/bundle/pony-currycomb.vim"]
 	path = .vim/bundle/pony-currycomb.vim
 	url = https://github.com/killerswan/pony-currycomb.vim.git
+[submodule ".vim/bundle/vim-better-whitespace"]
+	path = .vim/bundle/vim-better-whitespace
+	url = git://github.com/ntpeters/vim-better-whitespace.git
