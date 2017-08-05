@@ -8,7 +8,7 @@
     br = branch
     d = diff
     dc = diff --cached
-    lg = log -p --cc
+    lg = log -p --cc -D
     lol = log --graph --decorate --oneline
     lola = log --graph --decorate --oneline --all
 [color]
