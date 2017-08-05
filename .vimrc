@@ -14,4 +14,4 @@ let g:syntastic_go_gometalinter_args = "--fast -e 'exported .* should have comme
 
 let g:syntastic_pony_checkers = ['currycomb']
 
-:au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
