@@ -9,8 +9,8 @@ set bg=dark
 let g:syntastic_python_flake8_args = '--max-line-length=120'
 let g:syntastic_c_include_dirs = ['/usr/include/python2.7']
 
-let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
-" let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
+let g:syntastic_go_checkers = ['gometalinter']
+let g:syntastic_go_gometalinter_args = "--fast -e 'exported .* should have comment or be unexported' -e 'declaration of \"err\" shadows declaration at' --exclude gocyclo"
 
 let g:syntastic_pony_checkers = ['currycomb']
 
