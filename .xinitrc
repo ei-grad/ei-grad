@@ -17,14 +17,27 @@ fi
 eval $(/usr/bin/gnome-keyring-daemon --start)
 export SSH_AUTH_SOCK
 
-xcompmgr &
-#setxkbmap us,ru ,winkeys grp:caps_toggle,grp_led:scroll,compose:ralt
+if [ `hostname` == 'ei-grad-msi' ]; then
+    libinput-gestures-setup start
+    xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1
+fi
+
+setxkbmap us,ru ,winkeys grp:caps_toggle,grp_led:scroll,compose:ralt
+
 xset b off
-xset +fp /usr/share/fonts/local/
-#xwinwrap -b -fs -sp -fs -nf -ov -- /usr/lib/xscreensaver/glmatrix -root -window-id WID &
-feh --bg-fill ~/arch_linux-wallpaper-1920x1080.jpg
+
+xcompmgr &
+
+if [ "$DESKTOP_GLMATRIX" == "1" ]; then
+    xwinwrap -b -fs -sp -fs -nf -ov -- /usr/lib/xscreensaver/glmatrix -root -window-id WID &
+else
+    feh --bg-fill ~/arch_linux-wallpaper-1920x1080.jpg
+fi
+
 redshift -l 55.565654:37.340223 -t 5200:3200 &
+
 nm-applet &
+
 pcmanfm -d &
 
 wmname LG3D
