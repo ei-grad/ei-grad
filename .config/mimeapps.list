@@ -1,0 +1,13 @@
+[Default Applications]
+x-scheme-handler/http=firefox.desktop
+x-scheme-handler/https=firefox.desktop
+text/html=firefox.desktop
+application/pdf=org.gnome.Evince.desktop
+application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoffice-writer.desktop;
+
+[Added Associations]
+audio/flac=deadbeef.desktop;
+image/jpeg=eog.desktop;
+image/png=eog.desktop;
+audio/x-ape=deadbeef.desktop;
+text/csv=org.gnome.gedit.desktop;
