@@ -24,7 +24,7 @@
 	url = https://github.com/wakatime/vim-wakatime.git
 [submodule ".oh-my-zsh"]
 	path = .oh-my-zsh
-	url = https://github.com/ei-grad/oh-my-zsh.git
+	url = git@github.com:ei-grad/oh-my-zsh.git
 [submodule ".vim/bundle/syntastic"]
 	path = .vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
