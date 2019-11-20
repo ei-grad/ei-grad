@@ -1,14 +1,27 @@
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="ei-grad"
+#ZSH_THEME=jreese
 DISABLE_AUTO_UPDATE="true"
 DISABLE_CORRECTION="true"
 
 export PATH=$HOME/.local/bin:$HOME/go/bin:$PATH
 export WORKON_HOME=$HOME/.virtualenvs
 
-plugins=(git virtualenvwrapper virtualenv pyutils)
+plugins=(git virtualenvwrapper virtualenv pyutils colored-man-pages timewarrior)
+
+source /home/ei-grad/anaconda3/etc/profile.d/conda.sh
+
+gh() {
+    cd ~/repos/github.com
+    [ -d "`dirname $1`" ] || mkdir `dirname $1`
+    cd "`dirname $1`"
+    [ -d "`basename $1`" ] || git clone https://github.com/$1.git
+    cd "`basename $1`"
+}
 
 source $ZSH/oh-my-zsh.sh
+
+[ -e "`which direnv`" ] && eval "$(direnv hook zsh)"
 
 # key bindings
 bindkey '^[[1~' beginning-of-line
@@ -50,3 +63,6 @@ export WINEPREFIX=$HOME/.wine
 export GOPATH=$HOME/go
 
 setopt nonomatch
+
+# The next line updates PATH for Yandex Cloud CLI.
+if [ -f '/home/ei-grad/yandex-cloud/path.bash.inc' ]; then source '/home/ei-grad/yandex-cloud/path.bash.inc'; fi

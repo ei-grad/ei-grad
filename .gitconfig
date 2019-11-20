@@ -27,3 +27,5 @@
 [core]
     excludesfile = /home/ei-grad/.global_gitignore
     quotePath = false
+[submodule]
+    fetchJobs = 12
