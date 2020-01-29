@@ -15,3 +15,5 @@ pip-wheel-metadata
 htmlcov
 .editorconfig
 *.deps
+dist/
+build/

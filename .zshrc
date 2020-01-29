@@ -15,9 +15,11 @@ gh() {
     cd ~/repos/github.com
     [ -d "`dirname $1`" ] || mkdir `dirname $1`
     cd "`dirname $1`"
-    [ -d "`basename $1`" ] || git clone https://github.com/$1.git
+    [ -d "`basename $1`" ] || git clone git@github.com:$1.git
     cd "`basename $1`"
 }
+
+[ -e $HOME/.profile ] && source $HOME/.profile
 
 source $ZSH/oh-my-zsh.sh
 

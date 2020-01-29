@@ -25,3 +25,5 @@ xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
