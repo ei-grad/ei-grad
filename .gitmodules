@@ -10,9 +10,6 @@
 [submodule ".vim/bundle/kotlin-vim"]
 	path = .vim/bundle/kotlin-vim
 	url = https://github.com/udalov/kotlin-vim
-[submodule ".vim/bundle/python-syntax"]
-	path = .vim/bundle/python-syntax
-	url = https://github.com/hdima/python-syntax.git
 [submodule ".vim/bundle/vim-jade"]
 	path = .vim/bundle/vim-jade
 	url = https://github.com/digitaltoad/vim-jade.git
