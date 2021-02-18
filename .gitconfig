@@ -27,3 +27,11 @@
     quotePath = false
 [submodule]
     fetchJobs = 12
+[pull]
+	rebase = true
+#[url "git@gitlab.ozon.ru:"]
+#    insteadOf = https://gitlab.ozon.ru/
+[credential]
+    helper = /home/ei-grad/.local/bin/pass-git-helper
+[init]
+	defaultBranch = master

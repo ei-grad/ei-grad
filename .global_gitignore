@@ -17,3 +17,4 @@ htmlcov
 *.deps
 dist/
 build/
+/tags

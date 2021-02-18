@@ -19,9 +19,26 @@ gh() {
     cd "`basename $1`"
 }
 
+ogl() {
+    cd ~/repos/gitlab.ozon.ru
+    [ -d "`dirname $1`" ] || mkdir -p `dirname $1`
+    cd "`dirname $1`"
+    [ -d "`basename $1`" ] || git clone git@gitlab.ozon.ru:$1.git
+    cd "`basename $1`"
+}
+
 [ -e $HOME/.profile ] && source $HOME/.profile
 
 source $ZSH/oh-my-zsh.sh
+
+alias kubectl-dev="kubectl --kubeconfig ~/.kube/dev_cluster_developers"
+alias kubectl-dev-ds="kubectl-dev --namespace ds"
+alias kubectl-dev-bx="kubectl-dev --namespace bx"
+alias kubectl-stg="kubectl --kubeconfig ~/.kube/stg_cluster_developers"
+alias kubectl-stg-ds="kubectl-stg --namespace ds"
+alias kubectl-prod="kubectl --kubeconfig ~/.kube/prod_cluster_developers"
+alias kubectl-prod-ds="kubectl-prod --namespace ds"
+alias kubectl-prod-bx="kubectl-prod --namespace bx"
 
 [ -e "`which direnv`" ] && eval "$(direnv hook zsh)"
 
@@ -68,3 +85,19 @@ setopt nonomatch
 
 # The next line updates PATH for Yandex Cloud CLI.
 if [ -f '/home/ei-grad/yandex-cloud/path.bash.inc' ]; then source '/home/ei-grad/yandex-cloud/path.bash.inc'; fi
+
+# The next line enables shell command completion for yc.
+if [ -f '/home/ei-grad/yandex-cloud/completion.zsh.inc' ]; then source '/home/ei-grad/yandex-cloud/completion.zsh.inc'; fi
+
+alias pc="pass --clip"
+
+function getifaddr() {
+    ip address show dev $1 | grep -o 'inet [0-9\.]\+' | cut -f2 -d" "
+}
+
+unset _JAVA_OPTIONS
+
+export DOCKER_BUILDKIT=1
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk
+
+export PYTHON_KEYRING_BACKEND=keyring.backends.null.Keyring

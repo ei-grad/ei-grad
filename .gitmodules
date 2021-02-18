@@ -49,3 +49,6 @@
 [submodule ".oh-my-zsh/custom/plugins/timewarrior"]
 	path = .oh-my-zsh/custom/plugins/timewarrior
 	url = https://github.com/svenXY/timewarrior
+[submodule ".vim/bundle/v-vim"]
+	path = .vim/bundle/v-vim
+	url = https://github.com/ollykel/v-vim.git

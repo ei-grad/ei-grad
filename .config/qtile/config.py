@@ -3,6 +3,8 @@
 
 import os
 
+import subprocess
+
 from libqtile import bar, hook, layout, widget
 from libqtile.widget import base
 from libqtile.command import lazy
@@ -34,6 +36,8 @@ def adjust_brighness():
 @hook.subscribe.screen_change
 def restart_on_randr(qtile, ev):
     qtile.cmd_restart()
+    subprocess.run("feh --bg-max ~/arch_linux-wallpaper-1920x1080.jpg",
+                   shell=True)
 
 
 mod = 'mod1'
@@ -177,7 +181,7 @@ class Metrics(base.InLoopPollText):
         interfaces = []
         basedir = '/sys/class/net'
         for iface in os.listdir(basedir):
-            if iface in ('lo', ):
+            if iface in ('lo', ) or iface.startswith(('veth', 'br-')):
                 continue
             j = os.path.join
             ifacedir = j(basedir, iface)
@@ -238,5 +242,5 @@ def get_bar():
 
 screens = [
     Screen(top=get_bar()),
-    Screen()
+    #Screen()
 ]

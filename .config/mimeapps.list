@@ -4,6 +4,8 @@ x-scheme-handler/https=firefox.desktop
 text/html=firefox.desktop
 application/pdf=org.gnome.Evince.desktop
 application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoffice-writer.desktop;
+x-scheme-handler/msteams=teams.desktop
+x-scheme-handler/tg=telegramdesktop.desktop
 
 [Added Associations]
 audio/flac=deadbeef.desktop;
@@ -11,3 +13,6 @@ image/jpeg=eog.desktop;
 image/png=eog.desktop;
 audio/x-ape=deadbeef.desktop;
 text/csv=org.gnome.gedit.desktop;
+image/vnd.djvu=org.gnome.Evince.desktop;
+inode/directory=deadbeef.desktop;
+x-scheme-handler/tg=telegramdesktop.desktop;

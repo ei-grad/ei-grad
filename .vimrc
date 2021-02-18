@@ -8,7 +8,7 @@ set bg=dark
 
 set fileencodings=utf-8,cp1251,koi8-r,default,latin1
 
-let g:syntastic_python_checkers = ['flake8']
+let g:syntastic_python_checkers = ['flake8', 'mypy']
 let g:syntastic_python_flake8_args = '--max-line-length=120'
 let g:syntastic_c_include_dirs = ['/usr/include/python2.7']
 

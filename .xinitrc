@@ -14,12 +14,18 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
   unset f
 fi
 
-intel-virtual-output -b && xrandr --output VIRTUAL1 --right-of eDP1 --preferred || echo "No external monitor connected"
+[ -x `which fix-source-vol` ] && fix-source-vol 0.25 &
 
 eval $(/usr/bin/gnome-keyring-daemon --start)
 export SSH_AUTH_SOCK
 
 if [ `hostname` == 'ei-grad-msi' ]; then
+    if [ -x `which intel-virtual-output` ]; then
+        intel-virtual-output -b && \
+            xrandr --output HDMI-1 --preferred --pos 1920x-360 && \
+            xrandr --output VIRTUAL1 --right-of eDP1 --preferred || \
+            echo "No external monitor connected"
+    fi
     libinput-gestures-setup start
     xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1
 fi
@@ -33,7 +39,7 @@ xcompmgr &
 if [ "$DESKTOP_GLMATRIX" == "1" ]; then
     xwinwrap -b -fs -sp -fs -nf -ov -- /usr/lib/xscreensaver/glmatrix -root -window-id WID &
 else
-    feh --bg-fill ~/arch_linux-wallpaper-1920x1080.jpg
+    feh --bg-max ~/arch_linux-wallpaper-1920x1080.jpg
 fi
 
 redshift -l 55.565654:37.340223 -t 5200:3200 &
